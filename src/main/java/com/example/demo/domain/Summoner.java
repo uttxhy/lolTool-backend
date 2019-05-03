@@ -1,38 +1,17 @@
 package com.example.demo.domain;
 
-import com.alibaba.fastjson.annotation.JSONField;
+import lombok.Data;
 
+@Data
 public class Summoner {
-	private String summonerId;
+	private String accountId;
 	private String name;
-	private int level;
+	private int summonerLevel;
+	private Long revisionDate;
 	
-	public Summoner(String summonerId) {
-		this.summonerId = summonerId;
-	}
+	// not very useful properties
+	private String puuid;
+	private int profileIconId;
 
-	public String getSummonerId() {
-		return summonerId;
-	}
-
-	public void setSummonerId(String summonerId) {
-		this.summonerId = summonerId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getLevel() {
-		return level;
-	}
-
-	public void setLevel(int level) {
-		this.level = level;
-	}
-	
 }
+
